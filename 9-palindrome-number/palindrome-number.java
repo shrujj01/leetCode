@@ -5,7 +5,7 @@ class Solution {
         int end = num.length()-1;
 
         while(start<=end){
-            System.out.println("start = " + num.charAt(start) + " end = " + num.charAt(end));
+            //System.out.println("start = " + num.charAt(start) + " end = " + num.charAt(end));
             if(num.charAt(start) == num.charAt(end))
             {
                 start++; end--;
