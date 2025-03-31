@@ -10,7 +10,7 @@ class Solution {
             System.out.println("toSearch = " + toSearch + " and currently on " + nums[i]);
             if(numsMap.containsKey(toSearch)){
                 indices[0] = i;
-                indices[1] = numsMap.get(target-nums[i]);
+                indices[1] = numsMap.get(toSearch);
             }
             else{
                 numsMap.put(nums[i],i);
