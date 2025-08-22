@@ -14,9 +14,10 @@ class Solution {
         ListNode head = prevHead;
         
         int carry = 0;
-        while(l1 != null || l2 !=null || carry==1){
+
+        while(l1 != null || l2!=null || carry !=0){
             int sum = 0;
-            if(l1 != null){
+            if(l1!=null){
                 sum += l1.val;
                 l1 = l1.next;
             }
@@ -24,13 +25,14 @@ class Solution {
                 sum += l2.val;
                 l2 = l2.next;
             }
-            
+
             sum += carry;
             carry = sum/10;
             ListNode node = new ListNode(sum%10);
             head.next = node;
-            head = head.next;
+            head = head.next;     
         }
+
         return prevHead.next;
     }
 }
