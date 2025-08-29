@@ -1,26 +1,19 @@
 class Solution {
     public int missingNumber(int[] nums) {
-        
-        if(nums.length==0){
+        if(nums.length== 0){
             return 0;
         }
-
-        int totalNums = nums.length;
-        //int maxNumber = findMaxNumber(nums);
-
-        int expectedSum = getSum(totalNums);
+        int expectedSum = sumOfNNumbers(nums.length);
         int currentSum = 0;
-        for(int i =0 ;i<nums.length;i++){
-            currentSum = currentSum+nums[i];
+
+        for(int e : nums){
+            currentSum += e;
         }
-        return (expectedSum-currentSum);
+
+        return Math.abs(currentSum-expectedSum);
     }
 
-    public int getSum(int n){
-        if(n==0){
-            return 0;
-        }
-        int sum = (n*(n+1))/2;
-        return sum;
+    public int sumOfNNumbers(int n){
+        return (n*(n+1))/2;
     }
 }
