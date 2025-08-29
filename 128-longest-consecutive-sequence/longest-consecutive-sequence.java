@@ -8,10 +8,10 @@ class Solution {
         }
         int maxSequenceLength = 0;
         for(int i =0;i<nums.length;i++){
-            int currentLength = 0;
+            int currentLength = 1;
             int currentNum = nums[i];
                 if(!numsSet.contains(currentNum-1)){
-                    while(numsSet.contains(currentNum)){
+                    while(numsSet.contains(currentNum+1)){
                         numsSet.remove(currentNum);
                         currentNum +=1;
                         currentLength += 1;
