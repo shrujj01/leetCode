@@ -2,8 +2,8 @@ class Solution {
     public boolean isValidSudoku(char[][] board) {
         HashSet<String> seen = new HashSet<>();
 
-        for(int i=0;i<board.length;i++){
-            for(int j=0;j<board[i].length;j++){
+        for(int i=0;i<9;i++){
+            for(int j=0;j<9;j++){
 
                 char number = board[i][j];
                 if(number != '.'){
