@@ -4,7 +4,7 @@ public class Codec {
     public String encode(List<String> strs) {
         StringBuffer out = new StringBuffer();
         for(String s : strs){
-            out.append(s.replace("#","##")).append(" # ");
+            out.append(s.replace("#","##")).append(" & ");
         }
         return out.toString();
     }
@@ -12,7 +12,7 @@ public class Codec {
     // Decodes a single string to a list of strings.
     public List<String> decode(String s) {
         List strs = new ArrayList<>();
-        String[] array = s.split(" # ", -1);
+        String[] array = s.split(" & ", -1);
         for(int i = 0 ; i<array.length-1;i++){
             strs.add(array[i].replace("##","#"));
         }
