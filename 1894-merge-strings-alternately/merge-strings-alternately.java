@@ -9,14 +9,12 @@ class Solution {
             start1++;
             start2++;
         }   
-            while(start1<word1.length()){
-                resultString = resultString.append(word1.charAt(start1));
-                start1++;
+            if(start1<word1.length()){
+                resultString = resultString.append(word1.substring(start1));
             }
 
-            while(start2<word2.length()){
-                resultString = resultString.append(word2.charAt(start2));
-                start2++;
+            if(start2<word2.length()){
+                resultString = resultString.append(word2.substring(start2));
             }
         
         return resultString.toString();
